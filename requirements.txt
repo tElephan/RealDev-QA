@@ -1,0 +1,10 @@
+hydra-core
+omegaconf
+openai
+transformers
+torch
+spacy
+faiss-cpu
+pyserini
+numpy
+tqdm

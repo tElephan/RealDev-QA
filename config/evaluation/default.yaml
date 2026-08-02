@@ -1,0 +1,18 @@
+dataset:
+  name: devrag
+  path: ${hydra:runtime.cwd}/datasets/devrag
+
+output_dir: ${hydra:runtime.cwd}/outputs/${evaluation.dataset.name}
+
+llm_name: ${oc.env:EVAL_LLM_NAME,"qwen3.5-flash"}
+api_key: ${oc.env:QWEN_API_KEY,""}
+base_url: ${oc.env:QWEN_BASE_URL,"https://dashscope.aliyuncs.com/compatible-mode/v1"}
+
+temperature: 0
+max_tokens: 256
+max_retries: 3
+concurrency: 32
+
+# Optional manual suffix for evaluation output files.
+# If empty, evaluation.py derives one from llm_name, e.g. qwen3.5-flash -> qwen.
+result_suffix: qwen

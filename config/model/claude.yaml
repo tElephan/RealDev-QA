@@ -1,0 +1,5 @@
+llm_name: ${oc.env:CLAUDE_MODEL,"claude-3-5-sonnet-latest"}
+embedding_name: qwen/qwen3-embedding-0.6B
+embedding_dim: 256
+api_key: ${oc.env:CLAUDE_API_KEY,""}
+base_url: ${oc.env:CLAUDE_BASE_URL,""}

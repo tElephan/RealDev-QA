@@ -1,0 +1,5 @@
+llm_name: ${oc.env:OPENAI_MODEL,"gpt-4o-mini"}
+embedding_name: qwen/qwen3-embedding-0.6B
+embedding_dim: 256
+api_key: ${oc.env:OPENAI_API_KEY,""}
+base_url: ${oc.env:OPENAI_BASE_URL,"https://api.openai.com/v1"}

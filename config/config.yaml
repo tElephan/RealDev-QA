@@ -1,0 +1,28 @@
+defaults:
+  - model: qwen
+  - dataset: devrag
+  - search: default
+  - evaluation: default
+  - _self_
+
+resources:
+  global_llm_concurrency: 100
+  global_gpu_concurrency: 1
+
+agentic_modules:
+  planner: true
+  verifier: true
+
+ablation:
+  passthrough_verifier_top_k: 10
+  passthrough_verifier_snippet_chars: 1000
+
+search:
+  query_concurrency: 16
+  subquery_concurrency: 4
+
+storage:
+  path: ${hydra:runtime.cwd}/storage/${dataset.name}
+  force_rebuild_ontology: false
+
+output_dir: ${hydra:runtime.cwd}/outputs/${dataset.name}

@@ -1,0 +1,5 @@
+llm_name: ${oc.env:GEMINI_MODEL,"gemini-2.5-flash"}
+embedding_name: qwen/qwen3-embedding-0.6B
+embedding_dim: 1024
+api_key: ${oc.env:GEMINI_API_KEY,""}
+base_url: ${oc.env:GEMINI_BASE_URL,"https://generativelanguage.googleapis.com/v1beta/openai/"}
